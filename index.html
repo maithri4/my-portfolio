@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maithri's Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #F4F4F4;
+      color: #2E2E2E;
+      font-family: sans-serif;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5rem 2rem;
+      align-items: center;
+      background: #FFFFFF;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    header h1 {
+      color: #4A90E2;
+      font-size: 1.6rem;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    nav a {
+      color: #2E2E2E;
+      text-decoration: none;
+      font-size: 1rem;
+      position: relative;
+    }
+
+    nav a::before {
+      content: "✓";
+      color: #34d399;
+      position: absolute;
+      top: -1.2rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    nav a:hover {
+      color: #4A90E2;
+    }
+
+    section {
+      padding: 3rem 1.5rem;
+      text-align: center;
+      background: #FFFFFF;
+    }
+
+    #about p {
+      max-width: 600px;
+      margin: 0.8rem auto;
+    }
+
+    #about p:nth-child(1) {
+      font-size: 1.6rem;
+      color: #4A90E2;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 1rem 0.5rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 0.4rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+.btn.email {
+  background: #22c55e;  
+  color: white;
+}
+.btn.email:hover {
+  background: #16a34a; 
+}
+
+
+
+.btn.linkedin {
+  background: #0a66c2; 
+  color: white;
+}
+.btn.linkedin:hover {
+  background: #004182; 
+}
+
+.btn.github {
+  background: #6b7280; 
+  color: white;
+}
+.btn.github:hover {
+  background: #4b5563; 
+}
+
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .proj-card {
+      background: #FFFFFF;
+      padding: 1.5rem;
+      border-radius: 0.6rem;
+      transition: transform 0.3s, border 0.3s;
+      border: 1px solid #DDD;
+    }
+
+    .proj-card:hover {
+      transform: scale(1.03);
+      border-color: #4A90E2;
+    }
+
+    .proj-card h3 {
+      color: #4A90E2;
+      margin-bottom: 0.5rem;
+    }
+
+    .proj-card p {
+      color: #2E2E2E;
+      line-height: 1.4;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .skill-col h4 {
+      color: #4A90E2;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-col p {
+      margin-bottom: 0.3rem;
+    }
+
+    .skill-col p::before {
+      content: "✔ ";
+      color: #34d399;
+      margin-right: 0.3rem;
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: auto;
+      border-top: 3px solid #4A90E2;
+      padding: 2rem;
+      text-align: center;
+      background: #FFFFFF;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 1rem;
+        gap: 1rem;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>R Maithri</h1>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav>
+      <ul id="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="https://github.com/maithri4?tab=repositories" target="_blank">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/maithri-r-940721267" target="_blank">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+   <p>Hi, I’m <strong>R Maithri</strong>.</p>
+<p>
+  A passionate Computer Science student with real-world experience in building responsive, full-stack web applications.
+</p>
+<p>
+  I enjoy developing robust backend services using Java and Spring Boot, while also designing sleek, user-friendly frontends with React.
+  I thrive on solving practical problems, exploring new technologies, and writing clean, maintainable code — always driven to stay ahead in the tech world.
+</p>
+
+
+    <div>
+      <a href="mailto:maithir238@gmail.com" class="btn email">Email Me</a>
+      <a href="https://www.linkedin.com/in/maithri-r-940721267" class="btn linkedin" target="_blank">LinkedIn</a>
+      <a href="https://github.com/maithri4?tab=repositories" class="btn github" target="_blank">GitHub</a>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="proj-card">
+        <h3>Greeting Application</h3>
+        <p><em>Java | SpringBoot | MySQL | REST APIs | Postman</em></p>
+        <p>Built an intelligent Spring Boot API that responds with time-specific greetings, enhancing user interaction. Emphasized modular design principles and ensured robust performance using Postman for end-to-end testing.</p>
+      </div>
+
+      <div class="proj-card">
+        <h3>Student Management System</h3>
+        <p><em>Java | SpringBoot | Spring Data JPA | MySQL | HTML/CSS | ReactJS</em></p>
+        <p>Developed a full-stack student management system with secure REST APIs. Enabled efficient student data handling through CRUD operations and integrated a responsive UI for seamless user experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-col">
+        <h4>Frontend</h4>
+        <p>HTML5, CSS</p>
+        <p>JavaScript</p>
+      </div>
+      <div class="skill-col">
+        <h4>Backend</h4>
+        <p>Java, Spring Boot, Spring MVC</p>
+        <p>Hibernate ORM, Spring Data</p>
+      </div>
+      <div class="skill-col">
+        <h4>Databases & Tools</h4>
+        <p>MySQL, JDBC, Git, GitHub, Maven</p>
+        <p>IntelliJ, Eclipse, VS Code, Postman</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 R Maithri Designed with 💙
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-list').classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
+
